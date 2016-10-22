@@ -1,0 +1,89 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  LoadingPlugin (Quark-r1.0-55.jar)
+  EnderCorePlugin (EnderCore-1.10.2-0.4.1.53-beta.jar)
+  FMLPlugin (InventoryTweaks-1.61-58.jar)
+  TransformerLoader (OpenComputers-MC1.10.2-1.6.0.3-rc.1.jar)
+Contact their authors BEFORE contacting forge
+
+// This is a token for 1 free hug. Redeem at your nearest Mojangsta: [~~HUG~~]
+
+Time: 9/8/16 3:00 AM
+Description: Exception in server tick loop
+
+Missing Mods:
+	McJtyLib : [1.10-1.9.9,)
+
+net.minecraftforge.fml.common.MissingModsException: Mod deepresonance (DeepResonance) requires [McJtyLib@[1.10-1.9.9,)]
+	at net.minecraftforge.fml.common.Loader.sortModList(Loader.java:255)
+	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:525)
+	at net.minecraftforge.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:97)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:328)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:121)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:431)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Linux (amd64) version 2.6.18-406.el5
+	Java Version: 1.8.0_77, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 625703256 bytes (596 MB) / 986710016 bytes (941 MB) up to 2863661056 bytes (2731 MB)
+	JVM Flags: 2 total; -Xmx3072M -Xms256M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.32 Powered by Forge 12.18.1.2076 36 mods loaded, 36 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	U	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	U	FML{8.0.99.99} [Forge Mod Loader] (forge-1.10.2-12.18.1.2076-universal.jar) 
+	U	Forge{12.18.1.2076} [Minecraft Forge] (forge-1.10.2-12.18.1.2076-universal.jar) 
+	U	OpenComputers|Core{1.6.0.3-rc.1} [OpenComputers (Core)] (minecraft.jar) 
+	U	actuallyadditions{1.10.2-r62} [Actually Additions] (ActuallyAdditions-1.10.2-r62.jar) 
+	U	appleskin{1.0.3} [AppleSkin] (AppleSkin-mc1.10.2-1.0.3.jar) 
+	U	AutoRegLib{1.0-2} [AutoRegLib] (AutoRegLib-1.0-2.jar) 
+	U	Baubles{1.2.1.0} [Baubles] (Baubles-1.9.4-1.2.1.0.jar) 
+	U	BBG{5.0.0} [BetterBedrockGen] (BBG-1.9.4-5.0.0.jar) 
+	U	chisel{MC1.9.4-0.0.6.33} [Chisel] (Chisel-MC1.9.4-0.0.6.33.jar) 
+	U	craftelytra{1.1} [Craftable Elytra] (craftable-elytra-1.1-1.10.2.jar) 
+	U	craftingtweaks{6.1.12} [Crafting Tweaks] (CraftingTweaks_1.10.2-6.1.12.jar) 
+	U	deepresonance{1.2.2} [DeepResonance] (deepresonance-1.10-1.2.2.jar) 
+	U	ElecCore{1.5.311} [ElecCore] (ElecCore-1.9.4-1.5.311.jar) 
+	U	endercore{1.10.2-0.4.1.53-beta} [EnderCore] (EnderCore-1.10.2-0.4.1.53-beta.jar) 
+	U	EnderIO{1.10.2-3.0.1.101_beta} [Ender IO] (EnderIO-1.10.2-3.0.1.101_beta.jar) 
+	U	forestry{5.2.9.242} [Forestry] (forestry_1.10.2-5.2.9.242.jar) 
+	U	graves{1.10.2-b28-universal} [Graves Mod] (Graves-1.10.2-b28-universal.jar) 
+	U	guideapi{@VERSION@} [Guide-API] (Guide-API-1.10.2-2.0.2-45.jar) 
+	U	inventorytweaks{1.61-58-a1fd884} [Inventory Tweaks] (InventoryTweaks-1.61-58.jar) 
+	U	mantle{1.10.2-0.10.4.jenkins163} [Mantle] (Mantle-1.10.2-0.10.4.jar) 
+	U	mcmultipart{1.2.1} [MCMultiPart] (MCMultiPart-1.2.1-universal.jar) 
+	U	MekanismGenerators{9.1.1} [MekanismGenerators] (MekanismGenerators-1.10.2-9.1.1.290.jar) 
+	U	MekanismTools{9.1.1} [MekanismTools] (MekanismTools-1.10.2-9.1.1.290.jar) 
+	U	OpenComputers{1.6.0.3-rc.1} [OpenComputers] (OpenComputers-MC1.10.2-1.6.0.3-rc.1.jar) 
+	U	Quark{r1.0-55} [Quark] (Quark-r1.0-55.jar) 
+	U	refinedstorage{0.9.4} [Refined Storage] (refinedstorage-0.9.4.jar) 
+	U	xreliquary{1.10.2-1.3.3.521} [Reliquary] (Reliquary-1.10.2-1.3.3.521.jar) 
+	U	rftools{5.21} [RFTools] (rftools-1.10-5.21.jar) 
+	U	roots{0.201} [Roots] (roots-1.10.2-0.201.0.jar) 
+	U	AS_Ruins{16.2} [Ruins Spawning System] (Ruins-1.10.2.jar) 
+	U	simpleretrogen{4.0.1+8} [Simple Retrogen] (simpleretrogen-1.10-4.0.1+8.jar) 
+	U	StorageDrawers{1.10.2-3.2.7} [Storage Drawers] (StorageDrawers-1.10.2-3.2.7.jar) 
+	U	tconstruct{1.10-2.3.3a.jenkins271} [Tinkers' Construct] (TConstruct-1.10-2.3.3a.jar) 
+	U	Waila{1.7.0} [Waila] (Waila-1.7.0-B3_1.9.4.jar) 
+	U	Zoology{1.0} [Zoology] (zoology-1.10-alpha-1.0.0.jar) 
+	Loaded coremods (and transformers): 
+LoadingPlugin (Quark-r1.0-55.jar)
+  vazkii.quark.base.asm.ClassTransformer
+EnderCorePlugin (EnderCore-1.10.2-0.4.1.53-beta.jar)
+  com.enderio.core.common.transform.EnderCoreTransformer
+FMLPlugin (InventoryTweaks-1.61-58.jar)
+  invtweaks.forge.asm.ContainerTransformer
+TransformerLoader (OpenComputers-MC1.10.2-1.6.0.3-rc.1.jar)
+  li.cil.oc.common.asm.ClassTransformer
+	Profiler Position: N/A (disabled)
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)

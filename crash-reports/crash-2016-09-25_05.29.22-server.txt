@@ -1,0 +1,598 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  LoadingPlugin (sampler-1.66.jar)
+  LoadingHook (Mekanism-1.10.2-9.1.1.290.jar)
+  LoadingPlugin (Quark-r1.0-55.jar)
+  EnderCorePlugin (EnderCore-1.10.2-0.4.1.53-beta.jar)
+  IC2core (industrialcraft-2-2.6.56-ex110.jar)
+  FMLPlugin (InventoryTweaks-1.61-58.jar)
+  TransformerLoader (OpenComputers-MC1.10.2-1.6.0.3-rc.1.jar)
+Contact their authors BEFORE contacting forge
+
+// I blame Dinnerbone.
+
+Time: 9/25/16 5:29 AM
+Description: Watching Server
+
+java.lang.Error
+	at net.minecraft.world.World.func_175726_f(World.java:298)
+	at net.minecraft.world.World.func_180495_p(World.java:842)
+	at net.minecraft.world.World.func_184144_a(World.java:1249)
+	at net.minecraft.entity.Entity.func_70091_d(Entity.java:639)
+	at net.minecraft.entity.item.EntityItem.func_70071_h_(EntityItem.java:115)
+	at net.minecraft.world.World.func_72866_a(World.java:1964)
+	at net.minecraft.world.WorldServer.func_72866_a(WorldServer.java:838)
+	at net.minecraft.world.World.func_72870_g(World.java:1934)
+	at net.minecraft.world.World.func_72939_s(World.java:1750)
+	at net.minecraft.world.WorldServer.func_72939_s(WorldServer.java:619)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:709)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:387)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:613)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:471)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at net.minecraft.world.World.func_175726_f(World.java:298)
+	at net.minecraft.world.World.func_180495_p(World.java:842)
+	at net.minecraft.world.World.func_184144_a(World.java:1249)
+	at net.minecraft.entity.Entity.func_70091_d(Entity.java:639)
+	at net.minecraft.entity.item.EntityItem.func_70071_h_(EntityItem.java:115)
+	at net.minecraft.world.World.func_72866_a(World.java:1964)
+	at net.minecraft.world.WorldServer.func_72866_a(WorldServer.java:838)
+	at net.minecraft.world.World.func_72870_g(World.java:1934)
+	at net.minecraft.world.World.func_72939_s(World.java:1750)
+	at net.minecraft.world.WorldServer.func_72939_s(WorldServer.java:619)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:709)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:387)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:613)
+
+-- Thread Dump --
+Details:
+	Threads: "Keep-Alive-Timer" Id=7440 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at sun.net.www.http.KeepAliveCache.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Netty Server IO #11" Id=44 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@2a02058b
+	-  locked java.util.Collections$UnmodifiableSet@24c5eebb
+	-  locked sun.nio.ch.EPollSelectorImpl@20fa6efb
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Netty Server IO #10" Id=43 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@926f949
+	-  locked java.util.Collections$UnmodifiableSet@8c1db87
+	-  locked sun.nio.ch.EPollSelectorImpl@71bf5b7f
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Netty Server IO #9" Id=42 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@599dd84b
+	-  locked java.util.Collections$UnmodifiableSet@67cf9e80
+	-  locked sun.nio.ch.EPollSelectorImpl@61546c1d
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Netty Server IO #8" Id=41 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@6abbb7eb
+	-  locked java.util.Collections$UnmodifiableSet@5dd36577
+	-  locked sun.nio.ch.EPollSelectorImpl@46f3cbd3
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Netty Server IO #7" Id=40 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@4857394
+	-  locked java.util.Collections$UnmodifiableSet@33369800
+	-  locked sun.nio.ch.EPollSelectorImpl@7508abcc
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Netty Server IO #6" Id=39 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@2d7d5bed
+	-  locked java.util.Collections$UnmodifiableSet@24b8405
+	-  locked sun.nio.ch.EPollSelectorImpl@5bafad4
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Chunk I/O Executor Thread-1" Id=2074 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@35dc7764
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@35dc7764
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Netty Server IO #5" Id=38 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@7239f001
+	-  locked java.util.Collections$UnmodifiableSet@2c8c29ef
+	-  locked sun.nio.ch.EPollSelectorImpl@7eb21af0
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Netty Server IO #4" Id=37 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@28832515
+	-  locked java.util.Collections$UnmodifiableSet@150761fc
+	-  locked sun.nio.ch.EPollSelectorImpl@5889f1e2
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Netty Server IO #3" Id=36 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@36020599
+	-  locked java.util.Collections$UnmodifiableSet@79835c1
+	-  locked sun.nio.ch.EPollSelectorImpl@29beac4f
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Netty Server IO #2" Id=35 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@3eaf5e7b
+	-  locked java.util.Collections$UnmodifiableSet@1827aafa
+	-  locked sun.nio.ch.EPollSelectorImpl@5e57a202
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Netty Server IO #1" Id=34 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@2d7a153
+	-  locked java.util.Collections$UnmodifiableSet@464f7bf4
+	-  locked sun.nio.ch.EPollSelectorImpl@631a69bd
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"File IO Thread" Id=78 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.minecraft.world.storage.ThreadedFileIOBase.func_75736_b(SourceFile:51)
+	at net.minecraft.world.storage.ThreadedFileIOBase.run(SourceFile:30)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Sampler watchdog thread" Id=70 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at sampler.N.run(F:41)
+
+
+"pool-3-thread-1" Id=69 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@be806e
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@be806e
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Server Watchdog" Id=60 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at net.minecraft.server.dedicated.ServerHangWatchdog.run(ServerHangWatchdog.java:46)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"RCON Listener #1" Id=59 RUNNABLE (in native)
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.AbstractPlainSocketImpl.accept(Unknown Source)
+	at java.net.ServerSocket.implAccept(Unknown Source)
+	at java.net.ServerSocket.accept(Unknown Source)
+	at net.minecraft.network.rcon.RConThreadMain.run(SourceFile:69)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"ic2-poolthread-2" Id=56 WAITING on ic2.core.util.PriorityExecutor$FixedPriorityQueue@3fdc6413
+	at java.lang.Object.wait(Native Method)
+	-  waiting on ic2.core.util.PriorityExecutor$FixedPriorityQueue@3fdc6413
+	at java.lang.Object.wait(Unknown Source)
+	at ic2.core.util.PriorityExecutor$FixedPriorityQueue.take(PriorityExecutor.java:143)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Netty Server IO #0" Id=33 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@2f138c7
+	-  locked java.util.Collections$UnmodifiableSet@3296eea5
+	-  locked sun.nio.ch.EPollSelectorImpl@46dfa569
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"ic2-poolthread-1" Id=31 WAITING on ic2.core.util.PriorityExecutor$FixedPriorityQueue@3fdc6413
+	at java.lang.Object.wait(Native Method)
+	-  waiting on ic2.core.util.PriorityExecutor$FixedPriorityQueue@3fdc6413
+	at java.lang.Object.wait(Unknown Source)
+	at ic2.core.util.PriorityExecutor$FixedPriorityQueue.take(PriorityExecutor.java:143)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"GA-DataSendImmediatelyThread" Id=29 WAITING on java.util.concurrent.Semaphore$NonfairSync@1a7fbd5d
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.Semaphore$NonfairSync@1a7fbd5d
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireShared(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireShared(Unknown Source)
+	at java.util.concurrent.Semaphore.acquireUninterruptibly(Unknown Source)
+	at nl.lang2619.bagginses.gameanalytics.EventHandler$3.run(EventHandler.java:147)
+
+
+"GA-DataSendThread" Id=28 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at nl.lang2619.bagginses.gameanalytics.EventHandler$2.run(EventHandler.java:132)
+
+
+"Sampler sampling thread 1" Id=23 WAITING on sampler.aY@11c399d5
+	at java.lang.Object.wait(Native Method)
+	-  waiting on sampler.aY@11c399d5
+	at java.lang.Object.wait(Unknown Source)
+	at sampler.aY.a(F:1200)
+	at sampler.aZ.run(F:248)
+
+
+"Server console handler" Id=19 RUNNABLE (in native)
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	-  locked java.io.BufferedInputStream@14a5be8e
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	-  locked java.io.InputStreamReader@2f6ab59e
+	at java.io.InputStreamReader.read(Unknown Source)
+	...
+
+
+"DestroyJavaVM" Id=18 RUNNABLE
+
+
+"Server thread" Id=16 RUNNABLE
+	at net.minecraft.world.World.func_175726_f(World.java:298)
+	at net.minecraft.world.World.func_180495_p(World.java:842)
+	at net.minecraft.world.World.func_184144_a(World.java:1249)
+	at net.minecraft.entity.Entity.func_70091_d(Entity.java:639)
+	at net.minecraft.entity.item.EntityItem.func_70071_h_(EntityItem.java:115)
+	at net.minecraft.world.World.func_72866_a(World.java:1964)
+	at net.minecraft.world.WorldServer.func_72866_a(WorldServer.java:838)
+	at net.minecraft.world.World.func_72870_g(World.java:1934)
+	...
+
+
+"Server Infinisleeper" Id=15 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.minecraft.server.dedicated.DedicatedServer$1.run(DedicatedServer.java:78)
+
+
+"Snooper Timer" Id=14 TIMED_WAITING on java.util.TaskQueue@4898607b
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@4898607b
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@4598458c
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@4598458c
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@7c70c27f
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@7c70c27f
+	at java.lang.Object.wait(Unknown Source)
+	at java.lang.ref.Reference.tryHandlePending(Unknown Source)
+	at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+
+
+
+Stacktrace:
+	at net.minecraft.server.dedicated.ServerHangWatchdog.run(ServerHangWatchdog.java:63)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Linux (amd64) version 2.6.18-406.el5
+	Java Version: 1.8.0_77, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 209568504 bytes (199 MB) / 2577399808 bytes (2458 MB) up to 2863661056 bytes (2731 MB)
+	JVM Flags: 2 total; -Xmx3072M -Xms256M
+	IntCache: cache: 0, tcache: 0, allocated: 3, tallocated: 104
+	FML: MCP 9.32 Powered by Forge 12.18.1.2076 61 mods loaded, 61 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forge-1.10.2-12.18.1.2076-universal.jar) 
+	UCHIJAAAA	Forge{12.18.1.2076} [Minecraft Forge] (forge-1.10.2-12.18.1.2076-universal.jar) 
+	UCHIJAAAA	OpenComputers|Core{1.6.0.3-rc.1} [OpenComputers (Core)] (minecraft.jar) 
+	UCHIJAAAA	actuallyadditions{1.10.2-r62} [Actually Additions] (ActuallyAdditions-1.10.2-r62.jar) 
+	UCHIJAAAA	ExtraUtils2{1.0} [ExtraUtils2] (extrautils2-1.10.2-alpha-1.0.1.jar) 
+	UCHIJAAAA	mantle{1.10.2-0.10.4.jenkins163} [Mantle] (Mantle-1.10.2-0.10.4.jar) 
+	UCHIJAAAA	tconstruct{1.10-2.3.3a.jenkins271} [Tinkers' Construct] (TConstruct-1.10-2.3.3a.jar) 
+	UCHIJAAAA	immersiveengineering{${version}} [Immersive Engineering] (ImmersiveEngineering-0.10-40.jar) 
+	UCHIJAAAA	JEI{3.9.0.246} [Just Enough Items] (jei_1.10.2-3.9.0.246.jar) 
+	UCHIJAAAA	appleskin{1.0.3} [AppleSkin] (AppleSkin-mc1.10.2-1.0.3.jar) 
+	UCHIJAAAA	Psi{r1.0-39} [Psi] (Psi-r1.0-39.jar) 
+	UCHIJAAAA	Quark{r1.0-55} [Quark] (Quark-r1.0-55.jar) 
+	UCHIJAAAA	AutoRegLib{1.0-2} [AutoRegLib] (AutoRegLib-1.0-2.jar) 
+	UCHIJAAAA	bagginses{2.4.2d} [Bagginses] (Bagginses-1.10.2-3.0.4b.jar) 
+	UCHIJAAAA	Baubles{1.2.1.0} [Baubles] (Baubles-1.9.4-1.2.1.0.jar) 
+	UCHIJAAAA	BBG{5.0.0} [BetterBedrockGen] (BBG-1.9.4-5.0.0.jar) 
+	UCHIJAAAA	bdlib{1.12.2.10} [BD Lib] (bdlib-1.12.2.10-mc1.10.2.jar) 
+	UCHIJAAAA	BiomesOPlenty{5.0.0.2082} [Biomes O' Plenty] (BiomesOPlenty-1.10.2-5.0.0.2082-universal.jar) 
+	UCHIJAAAA	guideapi{@VERSION@} [Guide-API] (Guide-API-1.10.2-2.0.2-45.jar) 
+	UCHIJAAAA	BloodMagic{1.9.4-2.0.4-58} [Blood Magic: Alchemical Wizardry] (BloodMagic-1.9.4-2.0.4-58.jar) 
+	UCHIJAAAA	Chameleon{1.10-2.1.7} [Chameleon] (Chameleon-1.10-2.1.7.jar) 
+	UCHIJAAAA	chisel{MC1.9.4-0.0.6.33} [Chisel] (Chisel-MC1.9.4-0.0.6.33.jar) 
+	UCHIJAAAA	combathelp{1.0.3} [Combat Help] (combathelp-1.9.4-1.0.3.jar) 
+	UCHIJAAAA	IC2{2.6.56-ex110} [IndustrialCraft 2] (industrialcraft-2-2.6.56-ex110.jar) 
+	UCHIJAAAA	CompactSolars{5.0.4.328} [Compact Solar Arrays] (CompactSolars-1.10.2-5.0.4.328-universal.jar) 
+	UCHIJAAAA	craftelytra{1.1} [Craftable Elytra] (craftable-elytra-1.1-1.10.2.jar) 
+	UCHIJAAAA	craftingtweaks{6.1.12} [Crafting Tweaks] (CraftingTweaks_1.10.2-6.1.12.jar) 
+	UCHIJAAAA	forestry{5.2.9.242} [Forestry] (forestry_1.10.2-5.2.9.242.jar) 
+	UCHIJAAAA	ElecCore{1.5.311} [ElecCore] (ElecCore-1.9.4-1.5.311.jar) 
+	UCHIJAAAA	OpenComputers{1.6.0.3-rc.1} [OpenComputers] (OpenComputers-MC1.10.2-1.6.0.3-rc.1.jar) 
+	UCHIJAAAA	deepresonance{1.2.2} [DeepResonance] (deepresonance-1.10-1.2.2.jar) 
+	UCHIJAAAA	endercore{1.10.2-0.4.1.53-beta} [EnderCore] (EnderCore-1.10.2-0.4.1.53-beta.jar) 
+	UCHIJAAAA	Waila{1.7.0} [Waila] (Waila-1.7.0-B3_1.9.4.jar) 
+	UCHIJAAAA	EnderIO{1.10.2-3.0.1.101_beta} [Ender IO] (EnderIO-1.10.2-3.0.1.101_beta.jar) 
+	UCHIJAAAA	fastleafdecay{v11} [Fast Leaf Decay] (FastLeafDecay-v11.jar) 
+	UCHIJAAAA	gendustry{1.6.4.19} [GenDustry] (gendustry-1.6.4.19-mc1.10.2.jar) 
+	UCHIJAAAA	graves{1.10.2-b28-universal} [Graves Mod] (Graves-1.10.2-b28-universal.jar) 
+	UCHIJAAAA	inventorytweaks{1.61-58-a1fd884} [Inventory Tweaks] (InventoryTweaks-1.61-58.jar) 
+	UCHIJAAAA	ironchest{1.10.2-7.0.9.796} [Iron Chest] (ironchest-1.10.2-7.0.9.796.jar) 
+	UCHIJAAAA	journeymap{1.10.2-5.2.4} [JourneyMap] (journeymap-1.10.2-5.2.4-unlimited.jar) 
+	UCHIJAAAA	mcmultipart{1.2.1} [MCMultiPart] (MCMultiPart-1.2.1-universal.jar) 
+	UCHIJAAAA	Mekanism{9.1.1} [Mekanism] (Mekanism-1.10.2-9.1.1.290.jar) 
+	UCHIJAAAA	MekanismGenerators{9.1.1} [MekanismGenerators] (MekanismGenerators-1.10.2-9.1.1.290.jar) 
+	UCHIJAAAA	MekanismTools{9.1.1} [MekanismTools] (MekanismTools-1.10.2-9.1.1.290.jar) 
+	UCHIJAAAA	morebees{1.10.2-1.0.1} [More Bees] (morebees-1.10.2-1.0.1.jar) 
+	UCHIJAAAA	netherportalfix{1.0} [Nether Portal Fix] (netherportalfix-mc1.9.4-4.0.1.jar) 
+	UCHIJAAAA	notenoughwands{1.3.6} [Not Enough Wands] (notenoughwands-1.10-1.3.6.jar) 
+	UCHIJAAAA	harvestcraft{1.9.4-pre} [Pam's HarvestCraft] (Pam's HarvestCraft 1.9.4-1.10.2b.jar) 
+	UCHIJAAAA	StorageDrawers{1.10.2-3.2.7} [Storage Drawers] (StorageDrawers-1.10.2-3.2.7.jar) 
+	UCHIJAAAA	refinedstorage{0.9.4} [Refined Storage] (refinedstorage-0.9.4.jar) 
+	UCHIJAAAA	xreliquary{1.10.2-1.3.3.521} [Reliquary] (Reliquary-1.10.2-1.3.3.521.jar) 
+	UCHIJAAAA	rftools{5.21} [RFTools] (rftools-1.10-5.21.jar) 
+	UCHIJAAAA	rftoolsdim{4.30beta48} [RFTools Dimensions] (rftoolsdim-1.10-4.30beta48.jar) 
+	UCHIJAAAA	roots{0.201} [Roots] (roots-1.10.2-0.201.0.jar) 
+	UCHIJAAAA	AS_Ruins{16.2} [Ruins Spawning System] (Ruins-1.10.2.jar) 
+	UCHIJAAAA	Sampler{1.66} [Sampler] (sampler-1.66.jar) 
+	UCHIJAAAA	simpleretrogen{4.0.1+8} [Simple Retrogen] (simpleretrogen-1.10-4.0.1+8.jar) 
+	UCHIJAAAA	icse{1.1.0.0} [I Can See Everything] (Wawla-1.10.2-2.3.0.203.jar) 
+	UCHIJAAAA	wawla{2.3.0.202} [What Are We Looking At] (Wawla-1.10.2-2.3.0.203.jar) 
+	UCHIJAAAA	Zoology{1.0} [Zoology] (zoology-1.10-alpha-1.0.0.jar) 
+	Loaded coremods (and transformers): 
+LoadingPlugin (sampler-1.66.jar)
+  
+LoadingHook (Mekanism-1.10.2-9.1.1.290.jar)
+  
+LoadingPlugin (Quark-r1.0-55.jar)
+  vazkii.quark.base.asm.ClassTransformer
+EnderCorePlugin (EnderCore-1.10.2-0.4.1.53-beta.jar)
+  com.enderio.core.common.transform.EnderCoreTransformer
+IC2core (industrialcraft-2-2.6.56-ex110.jar)
+  
+FMLPlugin (InventoryTweaks-1.61-58.jar)
+  invtweaks.forge.asm.ContainerTransformer
+TransformerLoader (OpenComputers-MC1.10.2-1.6.0.3-rc.1.jar)
+  li.cil.oc.common.asm.ClassTransformer
+	Pulsar/tconstruct loaded Pulses: 
+		- TinkerCommons (Enabled/Forced)
+		- TinkerWorld (Enabled/Not Forced)
+		- TinkerTools (Enabled/Not Forced)
+		- TinkerSmeltery (Enabled/Not Forced)
+		- TinkerGadgets (Enabled/Not Forced)
+		- TinkerOredict (Enabled/Forced)
+		- TinkerIntegration (Enabled/Forced)
+		- TinkerFluids (Enabled/Forced)
+		- TinkerMaterials (Enabled/Forced)
+		- craftingtweaksIntegration (Enabled/Not Forced)
+		- WailaIntegration (Enabled/Not Forced)
+
+	List of loaded APIs: 
+		* actuallyadditionsapi (22) from ActuallyAdditions-1.10.2-r62.jar
+		* Baubles|API (1.1.1.0) from Baubles-1.9.4-1.2.1.0.jar
+		* BloodMagic|API (@VERSION@) from BloodMagic-1.9.4-2.0.4-58.jar
+		* ChiselAPI (0.0.1) from Chisel-MC1.9.4-0.0.6.33.jar
+		* ChiselAPI|Carving (0.0.1) from Chisel-MC1.9.4-0.0.6.33.jar
+		* CoFHAPI (1.8.9R1.2.0B1) from ImmersiveEngineering-0.10-40.jar
+		* CoFHAPI|energy (1.8.9R1.2.0B1) from ActuallyAdditions-1.10.2-r62.jar
+		* CoFHAPI|item (1.8.9R1.2.0B1) from mcjtylib-1.10-1.9.9.jar
+		* CraftingTweaks|API (4.1) from CraftingTweaks_1.10.2-6.1.12.jar
+		* DR-API (1.0.4-Beta) from deepresonance-1.10-1.2.2.jar
+		* ElecCore|Abilities (#API_VER#) from ElecCore-1.9.4-1.5.311.jar
+		* EnderIOAPI (0.0.2) from EnderIO-1.10.2-3.0.1.101_beta.jar
+		* EnderIOAPI|Redstone (0.0.2) from EnderIO-1.10.2-3.0.1.101_beta.jar
+		* EnderIOAPI|Teleport (0.0.2) from EnderIO-1.10.2-3.0.1.101_beta.jar
+		* EnderIOAPI|Tools (0.0.2) from EnderIO-1.10.2-3.0.1.101_beta.jar
+		* ForestryAPI|apiculture (5.0.0) from forestry_1.10.2-5.2.9.242.jar
+		* ForestryAPI|arboriculture (4.2.1) from forestry_1.10.2-5.2.9.242.jar
+		* ForestryAPI|circuits (3.1.0) from forestry_1.10.2-5.2.9.242.jar
+		* ForestryAPI|core (5.0.0) from forestry_1.10.2-5.2.9.242.jar
+		* ForestryAPI|farming (2.1.0) from forestry_1.10.2-5.2.9.242.jar
+		* ForestryAPI|food (1.1.0) from forestry_1.10.2-5.2.9.242.jar
+		* ForestryAPI|fuels (3.0.0) from forestry_1.10.2-5.2.9.242.jar
+		* ForestryAPI|genetics (4.7.1) from forestry_1.10.2-5.2.9.242.jar
+		* ForestryAPI|greenhouse (5.0.0) from forestry_1.10.2-5.2.9.242.jar
+		* ForestryAPI|hives (4.1.0) from forestry_1.10.2-5.2.9.242.jar
+		* ForestryAPI|lepidopterology (1.3.0) from forestry_1.10.2-5.2.9.242.jar
+		* ForestryAPI|mail (3.0.0) from forestry_1.10.2-5.2.9.242.jar
+		* ForestryAPI|multiblock (3.0.0) from forestry_1.10.2-5.2.9.242.jar
+		* ForestryAPI|recipes (5.4.0) from forestry_1.10.2-5.2.9.242.jar
+		* ForestryAPI|storage (5.0.0) from forestry_1.10.2-5.2.9.242.jar
+		* ForestryAPI|world (2.1.0) from forestry_1.10.2-5.2.9.242.jar
+		* gendustryAPI (2.3.0) from gendustry-1.6.4.19-mc1.10.2.jar
+		* Guide-API|API (1.10.2-2.0.2-45) from Guide-API-1.10.2-2.0.2-45.jar
+		* ImmersiveEngineering|API (1.0) from ImmersiveEngineering-0.10-40.jar
+		* ImmersiveEngineering|ImmersiveFluxAPI (1.0) from ImmersiveEngineering-0.10-40.jar
+		* jeresources|API (0.4.8.48) from JustEnoughResources-1.10.2-0.4.8.48.jar
+		* journeymap|client-api (1.2) from journeymap-1.10.2-5.2.4-unlimited.jar
+		* journeymap|client-api-display (1.2) from journeymap-1.10.2-5.2.4-unlimited.jar
+		* journeymap|client-api-event (1.2) from journeymap-1.10.2-5.2.4-unlimited.jar
+		* journeymap|client-api-model (1.2) from journeymap-1.10.2-5.2.4-unlimited.jar
+		* journeymap|client-api-util (1.2) from journeymap-1.10.2-5.2.4-unlimited.jar
+		* JustEnoughItemsAPI (4.1.0) from jei_1.10.2-3.9.0.246.jar
+		* McJtyLib (1.10-1.9.9) from mcjtylib-1.10-1.9.9.jar
+		* MekanismAPI|core (9.0.0) from Mekanism-1.10.2-9.1.1.290.jar
+		* MekanismAPI|energy (9.0.0) from Mekanism-1.10.2-9.1.1.290.jar
+		* MekanismAPI|gas (9.0.0) from Mekanism-1.10.2-9.1.1.290.jar
+		* MekanismAPI|infuse (9.0.0) from Mekanism-1.10.2-9.1.1.290.jar
+		* MekanismAPI|laser (9.0.0) from Mekanism-1.10.2-9.1.1.290.jar
+		* MekanismAPI|reactor (9.0.0) from Mekanism-1.10.2-9.1.1.290.jar
+		* MekanismAPI|recipe (9.0.0) from Mekanism-1.10.2-9.1.1.290.jar
+		* MekanismAPI|transmitter (9.0.0) from Mekanism-1.10.2-9.1.1.290.jar
+		* MekanismAPI|util (9.0.0) from Mekanism-1.10.2-9.1.1.290.jar
+		* OpenComputersAPI|Component (6.0.0-alpha) from OpenComputers-MC1.10.2-1.6.0.3-rc.1.jar
+		* OpenComputersAPI|Core (6.0.0-alpha) from OpenComputers-MC1.10.2-1.6.0.3-rc.1.jar
+		* OpenComputersAPI|Driver (6.0.0-alpha) from OpenComputers-MC1.10.2-1.6.0.3-rc.1.jar
+		* OpenComputersAPI|Driver|Item (6.0.0-alpha) from OpenComputers-MC1.10.2-1.6.0.3-rc.1.jar
+		* OpenComputersAPI|Event (6.0.0-alpha) from OpenComputers-MC1.10.2-1.6.0.3-rc.1.jar
+		* OpenComputersAPI|FileSystem (6.0.0-alpha) from OpenComputers-MC1.10.2-1.6.0.3-rc.1.jar
+		* OpenComputersAPI|Internal (6.0.0-alpha) from OpenComputers-MC1.10.2-1.6.0.3-rc.1.jar
+		* OpenComputersAPI|Machine (6.0.0-alpha) from OpenComputers-MC1.10.2-1.6.0.3-rc.1.jar
+		* OpenComputersAPI|Manual (6.0.0-alpha) from OpenComputers-MC1.10.2-1.6.0.3-rc.1.jar
+		* OpenComputersAPI|Network (6.0.0-alpha) from OpenComputers-MC1.10.2-1.6.0.3-rc.1.jar
+		* OpenComputersAPI|Prefab (6.0.0-alpha) from OpenComputers-MC1.10.2-1.6.0.3-rc.1.jar
+		* PsiAPI (2) from Psi-r1.0-39.jar
+		* StorageDrawersAPI (1.7.10-1.2.0) from refinedstorage-0.9.4.jar
+		* StorageDrawersAPI|config (1.7.10-1.2.0) from refinedstorage-0.9.4.jar
+		* StorageDrawersAPI|event (1.7.10-1.2.0) from StorageDrawers-1.10.2-3.2.7.jar
+		* StorageDrawersAPI|inventory (1.7.10-1.2.0) from refinedstorage-0.9.4.jar
+		* StorageDrawersAPI|pack (1.7.10-1.2.0) from refinedstorage-0.9.4.jar
+		* StorageDrawersAPI|registry (1.7.10-1.2.0) from refinedstorage-0.9.4.jar
+		* StorageDrawersAPI|render (1.7.10-1.2.0) from StorageDrawers-1.10.2-3.2.7.jar
+		* StorageDrawersAPI|storage (1.7.10-1.2.0) from StorageDrawers-1.10.2-3.2.7.jar
+		* StorageDrawersAPI|storage-attribute (1.7.10-1.2.0) from refinedstorage-0.9.4.jar
+		* WailaAPI (1.3) from Waila-1.7.0-B3_1.9.4.jar
+	EnderIO: No known problems detected.
+	Detailed RF API diagnostics:
+                  * RF API class 'EnergyStorage' is loaded from: jar:file:/home/server107686/mods/Mekanism-1.10.2-9.1.1.290.jar!/cofh/api/energy/EnergyStorage.class
+                  * RF API class 'IEnergyConnection' is loaded from: jar:file:/home/server107686/mods/Mekanism-1.10.2-9.1.1.290.jar!/cofh/api/energy/IEnergyConnection.class
+                  * RF API class 'IEnergyContainerItem' is loaded from: jar:file:/home/server107686/mods/Mekanism-1.10.2-9.1.1.290.jar!/cofh/api/energy/IEnergyContainerItem.class
+                  * RF API class 'IEnergyHandler' is loaded from: jar:file:/home/server107686/mods/Mekanism-1.10.2-9.1.1.290.jar!/cofh/api/energy/IEnergyHandler.class
+                  * RF API class 'IEnergyProvider' is loaded from: jar:file:/home/server107686/mods/Mekanism-1.10.2-9.1.1.290.jar!/cofh/api/energy/IEnergyProvider.class
+                  * RF API class 'IEnergyReceiver' is loaded from: jar:file:/home/server107686/mods/Mekanism-1.10.2-9.1.1.290.jar!/cofh/api/energy/IEnergyReceiver.class
+                  * RF API class 'IEnergyStorage' is loaded from: jar:file:/home/server107686/mods/Mekanism-1.10.2-9.1.1.290.jar!/cofh/api/energy/IEnergyStorage.class
+                  * RF API class 'ItemEnergyContainer' is loaded from: jar:file:/home/server107686/mods/Mekanism-1.10.2-9.1.1.290.jar!/cofh/api/energy/ItemEnergyContainer.class
+                  * RF API class 'TileEnergyHandler' is loaded from: jar:file:/home/server107686/mods/Mekanism-1.10.2-9.1.1.290.jar!/cofh/api/energy/TileEnergyHandler.class
+                  * RF API class 'TileEnergyHandler' is loaded from: jar:file:/home/server107686/mods/Mekanism-1.10.2-9.1.1.290.jar!/cofh/api/energy/TileEnergyHandler.class
+
+	Profiler Position: N/A (disabled)
+	Player Count: 2 / 16; [EntityPlayerMP['Gurodiggerdeg'/62578, l='world', x=838.35, y=89.00, z=1089.34], EntityPlayerMP['S7evieL'/353178, l='world', x=-162.56, y=72.20, z=648.92]]
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)
