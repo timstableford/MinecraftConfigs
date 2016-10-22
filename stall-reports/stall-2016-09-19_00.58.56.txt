@@ -1,0 +1,234 @@
+Stall report from 2016-09-19 00:58:56 -0500, 24 threads, stalled for at least 30000 ms.
+Heap memory usage: 2069 / 2294 MB (max. 2863 MB).
+Created by Sampler 1.66 (MC 1.10).
+
+"Server thread" #16 prio=5
+RUNNABLE
+	at net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185890_d(BlockStateContainer.java:433)
+	at net.minecraft.block.Block.func_185477_a(Block.java:355)
+	at net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185908_a(BlockStateContainer.java:438)
+	at net.minecraft.world.World.func_184144_a(World.java:1252)
+	at net.minecraft.entity.Entity.func_70091_d(Entity.java:639)
+	at net.minecraft.entity.item.EntityItem.func_70071_h_(EntityItem.java:115)
+	at net.minecraft.world.World.func_72866_a(World.java:1964)
+	at net.minecraft.world.WorldServer.func_72866_a(WorldServer.java:838)
+	at net.minecraft.world.World.func_72870_g(World.java:1934)
+	at net.minecraft.world.World.func_72939_s(World.java:1750)
+	at net.minecraft.world.WorldServer.func_72939_s(WorldServer.java:619)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:709)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:387)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:613)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:471)
+	at java.lang.Thread.run(Unknown Source)
+
+"Chunk I/O Executor Thread-1" #81 daemon prio=5
+WAITING waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5c650c2b
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+"DestroyJavaVM" #18 prio=5
+RUNNABLE
+
+"File IO Thread" #85 prio=1
+TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.minecraft.world.storage.ThreadedFileIOBase.func_75736_b(SourceFile:51)
+	at net.minecraft.world.storage.ThreadedFileIOBase.run(SourceFile:30)
+	at java.lang.Thread.run(Unknown Source)
+
+"Finalizer" #3 daemon prio=8
+WAITING waiting on java.lang.ref.ReferenceQueue$Lock@bf53dee
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+
+"ForkJoinPool-1-worker-11" #83 daemon prio=5
+WAITING waiting on scala.concurrent.forkjoin.ForkJoinPool@402c91f5
+	at sun.misc.Unsafe.park(Native Method)
+	at scala.concurrent.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+"GA-DataSendImmediatelyThread" #29 daemon prio=5
+WAITING waiting on java.util.concurrent.Semaphore$NonfairSync@6fd8b50b
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireShared(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireShared(Unknown Source)
+	at java.util.concurrent.Semaphore.acquireUninterruptibly(Unknown Source)
+	at nl.lang2619.bagginses.gameanalytics.EventHandler$3.run(EventHandler.java:147)
+
+"GA-DataSendThread" #28 daemon prio=5
+TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at nl.lang2619.bagginses.gameanalytics.EventHandler$2.run(EventHandler.java:132)
+
+"Netty Server IO #0" #32 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@66459d23
+	- locked java.util.Collections$UnmodifiableSet@7fc7df74
+	- locked sun.nio.ch.EPollSelectorImpl@3364ef31
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #1" #33 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@47612092
+	- locked java.util.Collections$UnmodifiableSet@15f602b3
+	- locked sun.nio.ch.EPollSelectorImpl@35b595da
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #2" #34 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@11b87fa2
+	- locked java.util.Collections$UnmodifiableSet@1796eeb1
+	- locked sun.nio.ch.EPollSelectorImpl@3311768f
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #3" #35 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@3495181b
+	- locked java.util.Collections$UnmodifiableSet@719780ed
+	- locked sun.nio.ch.EPollSelectorImpl@2434439f
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"RCON Listener #1" #58 prio=5
+RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.AbstractPlainSocketImpl.accept(Unknown Source)
+	at java.net.ServerSocket.implAccept(Unknown Source)
+	at java.net.ServerSocket.accept(Unknown Source)
+	at net.minecraft.network.rcon.RConThreadMain.run(SourceFile:69)
+	at java.lang.Thread.run(Unknown Source)
+
+"Reference Handler" #2 daemon prio=10
+WAITING waiting on java.lang.ref.Reference$Lock@71fb4eec
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at java.lang.ref.Reference.tryHandlePending(Unknown Source)
+	at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+
+"Sampler sampling thread 1" #23 daemon prio=6
+WAITING waiting on sampler.aY@25be9156
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at sampler.aY.a(F:1200)
+	at sampler.aZ.run(F:248)
+
+"Sampler watchdog thread" #69 daemon prio=5
+RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at sampler.bh.a(F:91)
+	at sampler.bh.a(F:62)
+	at sampler.bh.a(F:47)
+	at sampler.N.run(F:50)
+
+"Server Infinisleeper" #15 daemon prio=5
+TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.minecraft.server.dedicated.DedicatedServer$1.run(DedicatedServer.java:78)
+
+"Server Watchdog" #59 daemon prio=5
+TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.minecraft.server.dedicated.ServerHangWatchdog.run(ServerHangWatchdog.java:83)
+	at java.lang.Thread.run(Unknown Source)
+
+"Server console handler" #19 daemon prio=5
+RUNNABLE
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	- locked java.io.BufferedInputStream@64c3c6ea
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	- locked java.io.InputStreamReader@704aa024
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	- locked java.io.InputStreamReader@704aa024
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at net.minecraft.server.dedicated.DedicatedServer$2.run(DedicatedServer.java:101)
+
+"Signal Dispatcher" #4 daemon prio=9
+RUNNABLE
+
+"Snooper Timer" #14 daemon prio=5
+TIMED_WAITING waiting on java.util.TaskQueue@5a9033cb
+	at java.lang.Object.wait(Native Method)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+
+"ic2-poolthread-1" #30 daemon prio=5
+WAITING waiting on ic2.core.util.PriorityExecutor$FixedPriorityQueue@4383fc7a
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at ic2.core.util.PriorityExecutor$FixedPriorityQueue.take(PriorityExecutor.java:143)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+"ic2-poolthread-2" #54 daemon prio=5
+WAITING waiting on ic2.core.util.PriorityExecutor$FixedPriorityQueue@4383fc7a
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at ic2.core.util.PriorityExecutor$FixedPriorityQueue.take(PriorityExecutor.java:143)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+"pool-3-thread-1" #68 prio=5
+WAITING waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@da838ed
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+

@@ -1,0 +1,414 @@
+Stall report from 2016-09-13 20:30:25 -0500, 36 threads, stalled for at least 30000 ms.
+Heap memory usage: 1979 / 2567 MB (max. 2863 MB).
+Created by Sampler 1.66 (MC 1.10).
+
+"Server thread" #16 prio=5
+RUNNABLE
+	at net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185890_d(BlockStateContainer.java:433)
+	at net.minecraft.block.Block.func_185477_a(Block.java:355)
+	at net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185908_a(BlockStateContainer.java:438)
+	at net.minecraft.world.World.func_184144_a(World.java:1252)
+	at net.minecraft.entity.Entity.func_70091_d(Entity.java:639)
+	at net.minecraft.entity.item.EntityItem.func_70071_h_(EntityItem.java:115)
+	at net.minecraft.world.World.func_72866_a(World.java:1964)
+	at net.minecraft.world.WorldServer.func_72866_a(WorldServer.java:838)
+	at net.minecraft.world.World.func_72870_g(World.java:1934)
+	at net.minecraft.world.World.func_72939_s(World.java:1750)
+	at net.minecraft.world.WorldServer.func_72939_s(WorldServer.java:619)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:709)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:387)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:613)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:471)
+	at java.lang.Thread.run(Unknown Source)
+
+"Chunk I/O Executor Thread-1" #74 daemon prio=5
+WAITING waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1e96c89d
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+"DestroyJavaVM" #18 prio=5
+RUNNABLE
+
+"File IO Thread" #113 prio=1
+TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.minecraft.world.storage.ThreadedFileIOBase.func_75736_b(SourceFile:51)
+	at net.minecraft.world.storage.ThreadedFileIOBase.run(SourceFile:30)
+	at java.lang.Thread.run(Unknown Source)
+
+"Finalizer" #3 daemon prio=8
+WAITING waiting on java.lang.ref.ReferenceQueue$Lock@124e9933
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+
+"ForkJoinPool-1-worker-11" #125 daemon prio=5
+WAITING waiting on scala.concurrent.forkjoin.ForkJoinPool@633926b1
+	at sun.misc.Unsafe.park(Native Method)
+	at scala.concurrent.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+"GA-DataSendImmediatelyThread" #29 daemon prio=5
+WAITING waiting on java.util.concurrent.Semaphore$NonfairSync@c62f0aa
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireShared(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireShared(Unknown Source)
+	at java.util.concurrent.Semaphore.acquireUninterruptibly(Unknown Source)
+	at nl.lang2619.bagginses.gameanalytics.EventHandler$3.run(EventHandler.java:147)
+
+"GA-DataSendThread" #28 daemon prio=5
+TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at nl.lang2619.bagginses.gameanalytics.EventHandler$2.run(EventHandler.java:132)
+
+"Netty Server IO #0" #32 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@48e90529
+	- locked java.util.Collections$UnmodifiableSet@329fe857
+	- locked sun.nio.ch.EPollSelectorImpl@5080f10e
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #1" #33 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@3ba3c72d
+	- locked java.util.Collections$UnmodifiableSet@3f88b08b
+	- locked sun.nio.ch.EPollSelectorImpl@37eaa2e8
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #10" #42 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@5bf6f77e
+	- locked java.util.Collections$UnmodifiableSet@d4a7c28
+	- locked sun.nio.ch.EPollSelectorImpl@746ef9c5
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #11" #43 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@11b8ea52
+	- locked java.util.Collections$UnmodifiableSet@7451a18d
+	- locked sun.nio.ch.EPollSelectorImpl@25fc6668
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #12" #44 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@4c653d3d
+	- locked java.util.Collections$UnmodifiableSet@46d2f5ca
+	- locked sun.nio.ch.EPollSelectorImpl@2ffa21c8
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #13" #45 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@609d4407
+	- locked java.util.Collections$UnmodifiableSet@34ebb545
+	- locked sun.nio.ch.EPollSelectorImpl@4aae8a57
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #14" #46 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@15abf1e
+	- locked java.util.Collections$UnmodifiableSet@21ebea0d
+	- locked sun.nio.ch.EPollSelectorImpl@1e5303dc
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #15" #47 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@3532a47c
+	- locked java.util.Collections$UnmodifiableSet@5574a16
+	- locked sun.nio.ch.EPollSelectorImpl@64d35c65
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #2" #34 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@3d97271d
+	- locked java.util.Collections$UnmodifiableSet@451976d
+	- locked sun.nio.ch.EPollSelectorImpl@135927fb
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #3" #35 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@32523e0c
+	- locked java.util.Collections$UnmodifiableSet@613b188a
+	- locked sun.nio.ch.EPollSelectorImpl@2226b733
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #4" #36 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@12e82a56
+	- locked java.util.Collections$UnmodifiableSet@68f57573
+	- locked sun.nio.ch.EPollSelectorImpl@18f48f0d
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #5" #37 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@582520a0
+	- locked java.util.Collections$UnmodifiableSet@57b5ba52
+	- locked sun.nio.ch.EPollSelectorImpl@414626f6
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #6" #38 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@4d685ee8
+	- locked java.util.Collections$UnmodifiableSet@55386bb1
+	- locked sun.nio.ch.EPollSelectorImpl@674853a
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #7" #39 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@7bec7480
+	- locked java.util.Collections$UnmodifiableSet@7d85c357
+	- locked sun.nio.ch.EPollSelectorImpl@1858caee
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #8" #40 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@310bffd
+	- locked java.util.Collections$UnmodifiableSet@90d96a7
+	- locked sun.nio.ch.EPollSelectorImpl@65361a6f
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #9" #41 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@32670e06
+	- locked java.util.Collections$UnmodifiableSet@5e464233
+	- locked sun.nio.ch.EPollSelectorImpl@33deef
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"RCON Listener #1" #58 prio=5
+RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.AbstractPlainSocketImpl.accept(Unknown Source)
+	at java.net.ServerSocket.implAccept(Unknown Source)
+	at java.net.ServerSocket.accept(Unknown Source)
+	at net.minecraft.network.rcon.RConThreadMain.run(SourceFile:69)
+	at java.lang.Thread.run(Unknown Source)
+
+"Reference Handler" #2 daemon prio=10
+WAITING waiting on java.lang.ref.Reference$Lock@44acc7d3
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at java.lang.ref.Reference.tryHandlePending(Unknown Source)
+	at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+
+"Sampler sampling thread 1" #23 daemon prio=6
+WAITING waiting on sampler.aY@ca26c42
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at sampler.aY.a(F:1200)
+	at sampler.aZ.run(F:248)
+
+"Sampler watchdog thread" #68 daemon prio=5
+RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at sampler.bh.a(F:91)
+	at sampler.bh.a(F:62)
+	at sampler.bh.a(F:47)
+	at sampler.N.run(F:50)
+
+"Server Infinisleeper" #15 daemon prio=5
+TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.minecraft.server.dedicated.DedicatedServer$1.run(DedicatedServer.java:78)
+
+"Server Watchdog" #59 daemon prio=5
+TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.minecraft.server.dedicated.ServerHangWatchdog.run(ServerHangWatchdog.java:83)
+	at java.lang.Thread.run(Unknown Source)
+
+"Server console handler" #19 daemon prio=5
+RUNNABLE
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	- locked java.io.BufferedInputStream@41b2f0d1
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	- locked java.io.InputStreamReader@166d7168
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	- locked java.io.InputStreamReader@166d7168
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at net.minecraft.server.dedicated.DedicatedServer$2.run(DedicatedServer.java:101)
+
+"Signal Dispatcher" #4 daemon prio=9
+RUNNABLE
+
+"Snooper Timer" #14 daemon prio=5
+TIMED_WAITING waiting on java.util.TaskQueue@d1124af
+	at java.lang.Object.wait(Native Method)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+
+"ic2-poolthread-1" #30 daemon prio=5
+WAITING waiting on ic2.core.util.PriorityExecutor$FixedPriorityQueue@6dd62d11
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at ic2.core.util.PriorityExecutor$FixedPriorityQueue.take(PriorityExecutor.java:143)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+"ic2-poolthread-2" #55 daemon prio=5
+WAITING waiting on ic2.core.util.PriorityExecutor$FixedPriorityQueue@6dd62d11
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at ic2.core.util.PriorityExecutor$FixedPriorityQueue.take(PriorityExecutor.java:143)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+"pool-3-thread-1" #23879 prio=5
+WAITING waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@7d7313e2
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+

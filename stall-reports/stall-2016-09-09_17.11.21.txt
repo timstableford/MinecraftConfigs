@@ -1,0 +1,452 @@
+Stall report from 2016-09-09 17:11:21 -0500, 32 threads, stalled for at least 30000 ms.
+Heap memory usage: 818 / 2634 MB (max. 2863 MB).
+Created by Sampler 1.66 (MC 1.10).
+
+"Server thread" #16 prio=5
+RUNNABLE
+	at net.minecraft.world.chunk.Chunk.func_177440_h(Chunk.java:1024)
+	at net.minecraft.world.World.func_175725_q(World.java:1607)
+	at net.minecraft.world.WorldServer.func_147456_g(WorldServer.java:431)
+	at net.minecraft.world.WorldServer.func_72835_b(WorldServer.java:220)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:698)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:387)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:613)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:471)
+	at java.lang.Thread.run(Unknown Source)
+
+"Chunk I/O Executor Thread-1" #2436 daemon prio=5
+WAITING waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1ccedf96
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+"DestroyJavaVM" #18 prio=5
+RUNNABLE
+
+"File IO Thread" #77 prio=1
+TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.minecraft.world.storage.ThreadedFileIOBase.func_75736_b(SourceFile:51)
+	at net.minecraft.world.storage.ThreadedFileIOBase.run(SourceFile:30)
+	at java.lang.Thread.run(Unknown Source)
+
+"Finalizer" #3 daemon prio=8
+WAITING waiting on java.lang.ref.ReferenceQueue$Lock@649f973e
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+
+"ForkJoinPool-1-worker-9" #2723 daemon prio=5
+WAITING waiting on scala.concurrent.forkjoin.ForkJoinPool@29ab37f0
+	at sun.misc.Unsafe.park(Native Method)
+	at scala.concurrent.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+"GA-DataSendImmediatelyThread" #29 daemon prio=5
+WAITING waiting on java.util.concurrent.Semaphore$NonfairSync@5871e727
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireShared(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireShared(Unknown Source)
+	at java.util.concurrent.Semaphore.acquireUninterruptibly(Unknown Source)
+	at nl.lang2619.bagginses.gameanalytics.EventHandler$3.run(EventHandler.java:147)
+
+"GA-DataSendThread" #28 daemon prio=5
+TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at nl.lang2619.bagginses.gameanalytics.EventHandler$2.run(EventHandler.java:132)
+
+"Netty Server IO #0" #32 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@2163ba01
+	- locked java.util.Collections$UnmodifiableSet@6d07d908
+	- locked sun.nio.ch.EPollSelectorImpl@16f0208a
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #1" #33 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@7d6a0f9c
+	- locked java.util.Collections$UnmodifiableSet@70579fea
+	- locked sun.nio.ch.EPollSelectorImpl@2ecab8ca
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #10" #42 daemon prio=5
+RUNNABLE
+	at io.netty.buffer.AbstractByteBuf.ensureAccessible(AbstractByteBuf.java:1186)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:848)
+	at io.netty.buffer.AbstractByteBuf.readBytes(AbstractByteBuf.java:662)
+	at net.minecraft.network.NettyVarint21FrameDecoder.decode(SourceFile:33)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:249)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:149)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at net.minecraft.network.LegacyPingHandler.channelRead(SourceFile:94)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.timeout.ReadTimeoutHandler.channelRead(ReadTimeoutHandler.java:150)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:130)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #11" #43 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@2de5eebc
+	- locked java.util.Collections$UnmodifiableSet@616cb4bb
+	- locked sun.nio.ch.EPollSelectorImpl@72fb0507
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #12" #44 daemon prio=5
+RUNNABLE
+	at io.netty.buffer.AbstractByteBuf.ensureAccessible(AbstractByteBuf.java:1186)
+	at io.netty.buffer.AbstractByteBuf.checkReadableBytes(AbstractByteBuf.java:1170)
+	at io.netty.buffer.AbstractByteBuf.readInt(AbstractByteBuf.java:619)
+	at net.minecraft.network.LegacyPingHandler.channelRead(SourceFile:69)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.timeout.ReadTimeoutHandler.channelRead(ReadTimeoutHandler.java:150)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:130)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #13" #45 daemon prio=5
+RUNNABLE
+	at net.minecraft.network.LegacyPingHandler.channelRead(SourceFile:76)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.timeout.ReadTimeoutHandler.channelRead(ReadTimeoutHandler.java:150)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:130)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+	- locked net.minecraft.launchwrapper.LaunchClassLoader@34b7bfc0 at depth -1
+
+"Netty Server IO #14" #46 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@485082b1
+	- locked java.util.Collections$UnmodifiableSet@7ccdf928
+	- locked sun.nio.ch.EPollSelectorImpl@30bd34d1
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #2" #34 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@554b0f74
+	- locked java.util.Collections$UnmodifiableSet@55116a40
+	- locked sun.nio.ch.EPollSelectorImpl@69897735
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #3" #35 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@3bf775a8
+	- locked java.util.Collections$UnmodifiableSet@64bb13e4
+	- locked sun.nio.ch.EPollSelectorImpl@e63428a
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #4" #36 daemon prio=5
+RUNNABLE
+	at sun.nio.cs.StreamEncoder.write(Unknown Source)
+	- locked java.io.OutputStreamWriter@21cf479d
+	at sun.nio.cs.StreamEncoder.write(Unknown Source)
+	at java.io.OutputStreamWriter.write(Unknown Source)
+	at java.io.Writer.write(Unknown Source)
+	at java.util.logging.StreamHandler.publish(Unknown Source)
+	- locked java.util.logging.ConsoleHandler@2bb9bc35
+	at java.util.logging.ConsoleHandler.publish(Unknown Source)
+	at java.util.logging.Logger.log(Unknown Source)
+	at io.netty.util.internal.logging.JdkLogger.log(JdkLogger.java:606)
+	at io.netty.util.internal.logging.JdkLogger.warn(JdkLogger.java:482)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:274)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.channel.ChannelHandlerAdapter.exceptionCaught(ChannelHandlerAdapter.java:79)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:271)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.channel.ChannelHandlerAdapter.exceptionCaught(ChannelHandlerAdapter.java:79)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:271)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.channel.ChannelHandlerAdapter.exceptionCaught(ChannelHandlerAdapter.java:79)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:271)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.channel.ChannelHandlerAdapter.exceptionCaught(ChannelHandlerAdapter.java:79)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:271)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.channel.ChannelInboundHandlerAdapter.exceptionCaught(ChannelInboundHandlerAdapter.java:131)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:271)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.channel.ChannelInboundHandlerAdapter.exceptionCaught(ChannelInboundHandlerAdapter.java:131)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:271)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.channel.ChannelInboundHandlerAdapter.exceptionCaught(ChannelInboundHandlerAdapter.java:131)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:271)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.channel.ChannelInboundHandlerAdapter.exceptionCaught(ChannelInboundHandlerAdapter.java:131)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:271)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.handler.timeout.ReadTimeoutHandler.readTimedOut(ReadTimeoutHandler.java:186)
+	at io.netty.handler.timeout.ReadTimeoutHandler$ReadTimeoutTask.run(ReadTimeoutHandler.java:212)
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:123)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:380)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:357)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #5" #37 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@11c59f25
+	- locked java.util.Collections$UnmodifiableSet@8024408
+	- locked sun.nio.ch.EPollSelectorImpl@748562d0
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #6" #38 daemon prio=5
+RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(Unknown Source)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	- locked io.netty.channel.nio.SelectedSelectionKeySet@2d669712
+	- locked java.util.Collections$UnmodifiableSet@79f7c84
+	- locked sun.nio.ch.EPollSelectorImpl@61a13056
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #7" #39 daemon prio=5
+BLOCKED waiting on java.util.logging.ConsoleHandler@2bb9bc35
+	at java.util.logging.StreamHandler.publish(Unknown Source)
+	at java.util.logging.ConsoleHandler.publish(Unknown Source)
+	at java.util.logging.Logger.log(Unknown Source)
+	at io.netty.util.internal.logging.JdkLogger.log(JdkLogger.java:606)
+	at io.netty.util.internal.logging.JdkLogger.warn(JdkLogger.java:482)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:274)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.channel.ChannelHandlerAdapter.exceptionCaught(ChannelHandlerAdapter.java:79)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:271)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.channel.ChannelHandlerAdapter.exceptionCaught(ChannelHandlerAdapter.java:79)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:271)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.channel.ChannelHandlerAdapter.exceptionCaught(ChannelHandlerAdapter.java:79)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:271)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.channel.ChannelHandlerAdapter.exceptionCaught(ChannelHandlerAdapter.java:79)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:271)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.channel.ChannelInboundHandlerAdapter.exceptionCaught(ChannelInboundHandlerAdapter.java:131)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:271)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.channel.ChannelInboundHandlerAdapter.exceptionCaught(ChannelInboundHandlerAdapter.java:131)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:271)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.channel.ChannelInboundHandlerAdapter.exceptionCaught(ChannelInboundHandlerAdapter.java:131)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:271)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.channel.ChannelInboundHandlerAdapter.exceptionCaught(ChannelInboundHandlerAdapter.java:131)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:271)
+	at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:249)
+	at io.netty.handler.timeout.ReadTimeoutHandler.readTimedOut(ReadTimeoutHandler.java:186)
+	at io.netty.handler.timeout.ReadTimeoutHandler$ReadTimeoutTask.run(ReadTimeoutHandler.java:212)
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:123)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:380)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:357)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #8" #40 daemon prio=5
+BLOCKED waiting on java.util.logging.ConsoleHandler@2bb9bc35
+	at java.util.logging.StreamHandler.publish(Unknown Source)
+	at java.util.logging.ConsoleHandler.publish(Unknown Source)
+	at java.util.logging.Logger.log(Unknown Source)
+	at io.netty.util.internal.logging.JdkLogger.log(JdkLogger.java:606)
+	at io.netty.util.internal.logging.JdkLogger.warn(JdkLogger.java:482)
+	at io.netty.channel.ChannelInitializer.channelRegistered(ChannelInitializer.java:74)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRegistered(AbstractChannelHandlerContext.java:158)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRegistered(AbstractChannelHandlerContext.java:144)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRegistered(DefaultChannelPipeline.java:732)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:442)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$100(AbstractChannel.java:374)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:418)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:380)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:357)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Netty Server IO #9" #41 daemon prio=5
+RUNNABLE
+	at java.lang.String.<init>(Unknown Source)
+	at java.lang.String.<init>(Unknown Source)
+	at net.minecraft.network.LegacyPingHandler.channelRead(SourceFile:65)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.timeout.ReadTimeoutHandler.channelRead(ReadTimeoutHandler.java:150)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:130)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Unknown Source)
+
+"Reference Handler" #2 daemon prio=10
+WAITING waiting on java.lang.ref.Reference$Lock@46e3c22e
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at java.lang.ref.Reference.tryHandlePending(Unknown Source)
+	at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+
+"Sampler sampling thread 1" #23 daemon prio=6
+WAITING waiting on sampler.aY@64fefd9a
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at sampler.aY.a(F:1200)
+	at sampler.aZ.run(F:248)
+
+"Sampler watchdog thread" #72 daemon prio=5
+RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at sampler.bh.a(F:91)
+	at sampler.bh.a(F:62)
+	at sampler.bh.a(F:47)
+	at sampler.N.run(F:50)
+
+"Server Infinisleeper" #15 daemon prio=5
+TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.minecraft.server.dedicated.DedicatedServer$1.run(DedicatedServer.java:78)
+
+"Server console handler" #19 daemon prio=5
+RUNNABLE
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	- locked java.io.BufferedInputStream@37e2b794
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	- locked java.io.InputStreamReader@20813592
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	- locked java.io.InputStreamReader@20813592
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at net.minecraft.server.dedicated.DedicatedServer$2.run(DedicatedServer.java:101)
+
+"Signal Dispatcher" #4 daemon prio=9
+RUNNABLE
+
+"Snooper Timer" #14 daemon prio=5
+TIMED_WAITING waiting on java.util.TaskQueue@779eb67a
+	at java.lang.Object.wait(Native Method)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+
+"ic2-poolthread-1" #30 daemon prio=5
+WAITING waiting on ic2.core.util.PriorityExecutor$FixedPriorityQueue@c5842f9
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at ic2.core.util.PriorityExecutor$FixedPriorityQueue.take(PriorityExecutor.java:143)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+"ic2-poolthread-2" #55 daemon prio=5
+WAITING waiting on ic2.core.util.PriorityExecutor$FixedPriorityQueue@c5842f9
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at ic2.core.util.PriorityExecutor$FixedPriorityQueue.take(PriorityExecutor.java:143)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
